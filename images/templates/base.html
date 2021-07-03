@@ -7,14 +7,14 @@
     <meta charset="utf-8">
 
     {% if title %}
-    <title>Denjal Images - {{title}}</title>
+    <title>DenJal - {{title}}</title>
     {% else %}
-    <title> Denjal Images </title>
+    <title> DenJal </title>
     {% endif %}
 
     {% block styles %}
     {% bootstrap_css %}
-    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'css/base.css' %}"> -->
     {% endblock %}
 
 </head>
@@ -23,12 +23,16 @@
     {% include "navbar.html" %}
 
     {% block content %}
-    <!-- <h1 class='text-center'>Images for {{date|date:"l d-F Y"}}</h1> -->
+
+
     {%endblock%}
 
     {% block scripts %}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
     {% bootstrap_javascript %}
+
     {% endblock %}
 </body>
 
