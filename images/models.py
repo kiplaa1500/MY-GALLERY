@@ -9,3 +9,16 @@ class Image(models.Model):
     author =models.CharField(max_length=255,default='Admin')
     description = models.TextField()
     date = models.DateTimeField(auto_now_add=True)
+    
+    
+    def __str__(self):
+        return self.image
+    class Meta:
+        ordering = ['image']
+        
+        
+class Location (models.Model):
+    location_name=models.CharField(max_length=255)
+    
+    def __str__(self):
+        return self.location_name
