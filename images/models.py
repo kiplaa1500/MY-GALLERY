@@ -74,9 +74,9 @@ class Image(models.Model):
         return image_location
      
     def __str__(self):
-        return self.image
-    class Meta:
-        ordering = ['image']
+        return self.name
+    # class Meta:
+    #     ordering = ['image']
         
         
 
