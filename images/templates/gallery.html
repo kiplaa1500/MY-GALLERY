@@ -28,7 +28,7 @@
                         <div class="modal-body card3">
                             <img src="{{image.image.url}}" alt="{{image.name}}" class="img-fluid" height="100%"
                                 width="100%">
-                                <!-- descriptions of every image upon image click -->
+                            <!-- descriptions of every image upon image click -->
                             <p class="text-center">{{image.description}}</p>
                             <p class="image-location">Location : {{image.location}}</p>
                             <p class="image-location">Category : {{image.category}}</p>
@@ -36,9 +36,25 @@
                         </div>
                         <div class="modal-footer-center">
 
-                             <!-- button to popup on image click -->
-                            <button type="button" class="btn btn-success btn-sm" data-dismiss="modal">Close Me 
+                            <!-- input form to return the image url -->
+                            <input class="form-control input-lg" type="text" value="{{image.image.url}}"
+                                id="{{image.id}}.url">
+                            <!-- button to close the pop up -->
+                            <button type="button" class="btn btn-success btn-sm" data-dismiss="modal">Fade Me
                             </button>
+                            <button type="button" class="btn btn-danger btn-sm"
+                                onclick="myFunction( '{{image.id}}.url')">copy
+                            </button>
+
+
+                            {%block script%}
+                            <script>
+                                myFunction = (element) => {
+                                    document.getElementById(element).select();
+                                    document.execCommand("copy");
+                                }
+                            </script>
+                            {%endblock%}
 
                         </div>
                     </div>
