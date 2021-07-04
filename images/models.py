@@ -71,13 +71,13 @@ class Image(models.Model):
     
     @classmethod
     def filter_by_location(cls, location):
-        image_location = Image.objects.filter(location__name=location).all()
+        image_location = Image.objects.filter(location=location).all()
         return image_location
      
     def __str__(self):
         return self.name
-    # class Meta:
-    #     ordering = ['image']
+    class Meta:
+        ordering = ['image']
         
         
 
