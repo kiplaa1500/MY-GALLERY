@@ -1,4 +1,5 @@
 from django.db import models
+from cloudinary.models import CloudinaryField
 import datetime as dt
 
 # Create your models here.
@@ -39,7 +40,7 @@ class Category(models.Model):
         return self.name
     
 class Image(models.Model):
-    image = models.ImageField(upload_to='images/')
+    image = CloudinaryField('image')
     name = models.CharField(max_length=55)
     author =models.CharField(max_length=255,default='Admin')
     description = models.TextField()
