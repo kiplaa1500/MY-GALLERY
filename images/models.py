@@ -39,7 +39,7 @@ class Category(models.Model):
         return self.name
     
 class Image(models.Model):
-    image = models.ImageField(upload_to='articles/')
+    image = models.ImageField(upload_to='images/')
     name = models.CharField(max_length=55)
     author =models.CharField(max_length=255,default='Admin')
     description = models.TextField()
