@@ -41,8 +41,8 @@ class Category(models.Model):
     
 class Image(models.Model):
     image = CloudinaryField('image')
-    name = models.CharField(max_length=55)
-    author =models.CharField(max_length=255,default='Admin')
+    name = models.CharField(max_length=67)
+    author =models.CharField(max_length=250,default='Admin')
     description = models.TextField()
     date = models.DateTimeField(auto_now_add=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
@@ -81,4 +81,3 @@ class Image(models.Model):
         
         
 
-    
