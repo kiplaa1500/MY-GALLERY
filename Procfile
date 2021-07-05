@@ -1,1 +1,1 @@
-web: gunicorn denjal.wsgi --log-file -
+web: gunicorn gallery.wsgi --log-file -
