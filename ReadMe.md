@@ -17,7 +17,7 @@ To view the image details, click on the respective image and a modal pops up. Th
 Spotted an image you'd love to copy? The application allows for image copying. To copy a specific image, click on the image to reveal the image modal pop up then click on the copy icon which copies the image link to your clipboard.
 
 ## Live link
-Visit the application on .
+Visit the application on https://denjal.herokuapp.com/.
 
 ## Development
 To make advancements/modifications, follow these steps:
